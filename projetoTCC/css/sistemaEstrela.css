@@ -1,0 +1,50 @@
+.avaliacao {
+  margin-top: 35px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-icon {
+  list-style-type: none;
+  cursor: pointer;
+  color: #dbcd4a;
+  font-size: 2.5em;
+}
+
+.star-icon::before {
+  content: "\2606"; /*vazio*/
+}
+
+.star-icon.ativo::before, .star-icon.hover::before {
+  content: "\2605"; /*cheio*/
+}
+
+#mensagem-success{
+  position: absolute;
+  text-align: center;
+  height: 35px;
+  width: 230px;
+  padding: 5px;
+  background-color: #4e9b4ea1;
+  border-radius: 5px;
+  color: white;
+  margin-top: 250px;
+  margin-bottom: 40px !important;
+  font-weight: 600;
+}
+
+#mensagem-error{
+  text-align: center;
+  height: 30px;
+  width: auto;
+  padding: 5px;
+  background-color: #972620be;
+  border-radius: 5px;
+  color: white;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+  font-weight: 600;
+}

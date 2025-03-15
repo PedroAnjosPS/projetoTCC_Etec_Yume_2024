@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor0: #2A2D39;
+    --cor1: #CDDCEE;
+    --cor2: #8BBFFC;
+    --cor3: #E1E1E1;
+    --cor4: #EFEDED;
+    --cor5: #E2E2E2;
+}
+
+main{
+    width: 800px;
+    height: 120vh;
+    background-color: var(--cor4);
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main img{
+    height: 130px;
+}
+
+.inputArea {
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+    width: 50%;
+    margin-bottom: 80px;
+}
+
+.inputArea input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 2.2em;
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 70px;
+    padding: 0 30px;
+    border: 2px solid rgba(128, 128, 128, 0.637);
+    background-color: transparent;
+    transition: 0.1s ease;
+    z-index: 1; /* Ajusta z-index para que a label apareça sobre o input */
+}
+
+.labelline {
+    position: absolute;
+    font-size: 1.6em;
+    color: rgba(128, 128, 128, 0.637);
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: var(--cor4);
+    transition: 0.2s ease;
+    pointer-events: none; /* Garante que a label não interfere com a interação do input */
+    transform: translateY(0); /* Ajusta a posição inicial da label */
+}
+
+.inputArea input:focus,
+.inputArea input:valid {
+    color: rgba(0, 0, 0, 0.63);
+    border: 4px solid rgba(0, 0, 0, 0.63);
+}
+
+.inputArea input:focus + .labelline,
+.inputArea input:not(:placeholder-shown) + .labelline {
+    color: rgba(0, 0, 0, 0.63);
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-14px, -17px) scale(0.75); /* Ajusta a posição e o tamanho da label quando o input está preenchido */
+    z-index: 2; /* Garantir que a label apareça sobre o input */
+}
+
+
+.upload{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--cor3);
+    border: 2px dashed #0000003f;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.123);
+    font-weight: 600;
+}
+
+.upload > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+#img-perfil.show{
+    opacity: 1; /* Faz a imagem ficar visível */
+    transform: scale(1); /* Traz a imagem ao tamanho normal */
+}
+
+.botao-upload{
+    background-color: var(--cor2);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.178);
+    height: 80px;
+    width: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.botao-upload:hover{
+    background-color: #8cbdf5;
+    cursor: pointer !important;
+}
+
+.botao-upload:active{
+    background-color: #398ceb;
+}
+
+.botao-upload > input#edit-foto{
+    height: 0;
+    width: 0;
+    position: relative;
+    background-color: #2A2D39;
+    opacity: 1;
+    inset: 0;
+}
+
+.botao-upload > label{
+    position: relative;
+    margin: auto;
+    font-size: 1.46em;
+    font-weight: 600;
+    line-height: 80px;
+    width: 100%;
+}
+
+.botao-upload > label > img{
+    height: 25px;
+    width: 25px;
+}
+
+#mensagem-error{
+    text-align: center;
+    align-items: center;
+    height: 30px;
+    padding: 5px;
+    background-color: #972620b2;
+    border-radius: 5px;
+    color: white;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  #mensagem-success{
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    background-color: #4e9b4e;
+    border-radius: 5px;
+    color: white;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+div.exc_des_conta{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.exc_des_conta p{
+    margin: 0px 50px;
+    text-decoration: none;
+    text-align: center;
+    color: #326fd2d1;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+div.exc_des_conta p:hover{
+    color: #254f92d1;
+    cursor: pointer;
+}
+
+div.exc_des_conta p:active{
+    color: #173463d1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /*para evitar que o usuario selecione o conteúdo*/
+}

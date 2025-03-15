@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+:root{
+  --cor0: #2A2D39;
+  --cor1: #CDDCEE;
+  --cor2: #8BBFFC;
+  --cor3: #E1E1E1;
+  --cor4: #EFEDED;
+  --cor5: #E2E2E2;
+}
+
+main.index {
+  margin-top: 80px;
+  min-height: 490px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 55%;
+  overflow: hidden; /* Oculta o conteúdo que ultrapassa a largura do contêiner */
+}
+
+.carousel-wrapper1 {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  overflow: hidden; /* Oculta o conteúdo que ultrapassa a largura do contêiner */
+}
+
+.carrosselAnimes {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ajusta o carrossel para ocupar toda a largura disponível */
+  height: 100%; /* Altura do carrossel, ajuste conforme necessário */
+  background-color: var(--cor1);
+  white-space: nowrap; /* Remove a quebra de linha dentro do contêiner */
+  transition: transform 0.5s ease-in-out;
+}
+
+.previewAnime {
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 10px;
+  flex-wrap: wrap;
+  height: 320px;
+  width: 250px;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.previewAnime:hover{
+  background-color: rgba(0, 0, 0, 0.486);
+  cursor: pointer;
+}
+
+.previewAnime img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*para que a imagem cubra 100% o espaço da div*/
+  border-radius: 15px;
+  z-index: 0;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.205);
+}
+
+.previewAnime h1 {
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.486);
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: -50px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 0px 0px 15px 15px;
+  padding-top: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.previewAnime h1:hover{
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev::before, .next::before {
+  content: '';
+  border: solid rgb(0, 0, 0);
+  color: white;
+  font-size: 2em;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg);
+}
+
+.prev::before {
+  transform: rotate(135deg);
+}
+
+.next::before {
+  transform: rotate(-45deg);
+}
+
+.prev:hover::before, .next:hover::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev:focus, .next:focus {
+  outline: none;
+}
+
+.carrosselNoticias {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ajusta o carrossel para ocupar toda a largura disponível */
+  height: 100%; /* Altura do carrossel, ajuste conforme necessário */
+  background-color: var(--cor1);
+  white-space: nowrap; /* Remove a quebra de linha dentro do contêiner */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrosselNoticias a{
+  text-decoration: none;
+  color: black;
+}
+
+.previewNoticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 10px;
+  flex-wrap: wrap;
+  height: 270px;
+  max-width: 240px;
+  min-width: 240px;
+  background-color: var(--cor4);
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.215);
+}
+
+.previewNoticia:hover{
+  background-color: var(--cor5);
+  cursor: pointer; 
+}
+
+.previewNoticia img {
+  position: relative;
+  top: 0;
+  width: 103.5%;
+  height: 200px;
+  border-radius: 15px 15px 0px 0px;
+  margin-top: -33px;
+  margin-right: -4.4%;
+  margin-left: -4.4%;
+}
+
+.previewNoticia h1 {
+  font-size: 1.2em;
+  margin-top: 5px;
+  white-space: nowrap;      
+  overflow: hidden;          
+  text-overflow: ellipsis;   
+  width: 100%;
+}
+
+.prevNot, .nextNot {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+}
+
+.prevNot {
+  left: 10px;
+}
+
+.nextNot {
+  right: 10px;
+}
+
+.prevNot::before, .nextNot::before {
+  content: '';
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(45deg);
+}
+
+.prevNot::before {
+  transform: rotate(135deg);
+}
+
+.nextNot::before {
+  transform: rotate(-45deg);
+}
+
+.prevNot:hover::before, .nextNot:hover::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.prevNot:focus, .nextNot:focus {
+  outline: none;
+}
+

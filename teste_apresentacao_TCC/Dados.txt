@@ -1,0 +1,20 @@
+Usuário:
+
+	Nome: Mr mussa
+	Email: mussa@gmail.com
+	Senha: Mussamussa
+
+ANIME:
+
+	Título: Hajime no Ippo
+	Descrição: Ippo Makunouchi, um estudante humilde que ajuda sua mãe no trabalho, sofre bullying constante na escola. Um dia, é salvo por Takamura, um boxeador, e levado a um ginásio. Após assistir a vídeos de lutas, Ippo descobre sua paixão pelo boxe e, com esforço e determinação, prova seu potencial para se tornar um grande lutador.
+	Gêneros: Ação, Comédia, Esporte, Drama.
+	Ep: 76
+	Data: 10/10/2000
+
+NOTÍCIA:
+
+	Manchete: One Piece – Mangá terá pausa de 2 semanas por conta da saúde do autor
+	Url: https://www.intoxianime.com/2024/11/one-piece-manga-tera-pausa-de-2-semanas-por-conta-da-saude-do-autor/
+	Data: 17/11/2024
+

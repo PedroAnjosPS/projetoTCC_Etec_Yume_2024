@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+:root{
+  --cor0: #2A2D39;
+  --cor1: #CDDCEE;
+  --cor2: #8BBFFC;
+  --cor3: #E1E1E1;
+  --cor4: #EFEDED;
+  --cor5: #E2E2E2;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--cor0);
+    font-size: 19px;
+  }
+
+  .container {
+    
+    background-color: var(--cor1);
+    padding: 80px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+
+  input {
+    display: block;
+    margin-top: 30px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    width: 350px;
+    height: 50px;
+    padding: 0.6em;
+    margin-bottom: 20px;
+    border: 1px var(--cor5);
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    margin-inline: 20px;
+  }
+
+  .cadastrar_voltar {
+    background-color: var(--cor2);
+    color: rgb(0, 0, 0);
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 23px;
+    margin-top: 30px;
+    font-size: 1.2em;
+    border:none;
+    box-shadow: 3px 3px 4px #0000003e;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  h2{
+      text-align: center;
+      margin-top: -25px;
+      margin-bottom: 20px;
+  }
+
+  #mensagem-error{
+    height: 30px;
+    padding: 5px;
+    background-color: #972620b2;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #mensagem-success{
+    height: 25px;
+    padding: 5px;
+    background-color: #4e9b4e;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #verSenha1{
+    position:relative;
+    margin-bottom: -57px;
+    bottom: 65px;
+    left:310px;
+    background: url("../imgs/icons/olho_aberto.png");
+    background-size: cover;
+    width:40px;
+    height: 40px;
+    cursor:pointer;
+   }
+
+   #verSenha2{
+    position:relative;
+    bottom: 65px;
+    left:310px;
+    background: url("../imgs/icons/olho_aberto.png");
+    background-size: cover;
+    width:40px;
+    height: 40px;
+    cursor:pointer;
+   }
